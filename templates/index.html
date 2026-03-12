@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Word Grouping Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="professional-mode">
+    <div class="container">
+        <div class="main-content">
+            <div class="header-controls">
+                <h1 id="main-title">Word Grouping Game</h1>
+                <label class="mode-toggle">
+                    <input type="checkbox" id="professional-mode" checked>
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Professional Mode</span>
+                </label>
+            </div>
+            
+            <div class="input-section">
+                <h2 id="input-title">Enter 16 Words</h2>
+                <textarea id="word-input" placeholder="Enter 16 words, one per line or separated by commas"></textarea>
+                <button id="start-game">Start Game</button>
+            </div>
+            
+            <div class="game-section" id="game-section" style="display: none;">
+                <div class="color-selector">
+                    <h3 id="color-selector-title">Select Color:</h3>
+                    <div class="color-buttons">
+                        <button class="color-btn yellow" data-color="yellow" data-label-game="Yellow" data-label-pro="Category A">Yellow</button>
+                        <button class="color-btn green" data-color="green" data-label-game="Green" data-label-pro="Category B">Green</button>
+                        <button class="color-btn blue" data-color="blue" data-label-game="Blue" data-label-pro="Category C">Blue</button>
+                        <button class="color-btn purple" data-color="purple" data-label-game="Purple" data-label-pro="Category D">Purple</button>
+                    </div>
+                </div>
+                <div class="grid-container">
+                    <div class="word-grid" id="word-grid"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar" id="sidebar" style="display: none;">
+            <h2 id="sidebar-title">Group Notes</h2>
+            <div class="color-notes">
+                <div class="color-note yellow-note">
+                    <div class="color-label yellow" style="background-color: #FFFACD;">Yellow</div>
+                    <textarea class="note-input" id="yellow-note" placeholder="What connects these words?"></textarea>
+                </div>
+                <div class="color-note green-note">
+                    <div class="color-label green" style="background-color: #C8E6C9;">Green</div>
+                    <textarea class="note-input" id="green-note" placeholder="What connects these words?"></textarea>
+                </div>
+                <div class="color-note blue-note">
+                    <div class="color-label blue" style="background-color: #B4A7D6;">Blue</div>
+                    <textarea class="note-input" id="blue-note" placeholder="What connects these words?"></textarea>
+                </div>
+                <div class="color-note purple-note">
+                    <div class="color-label purple" style="background-color: #CE93D8;">Purple</div>
+                    <textarea class="note-input" id="purple-note" placeholder="What connects these words?"></textarea>
+                </div>
+            </div>
+            <button id="reset-game">Reset Game</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
