@@ -1,4 +1,4 @@
-# Words — NYT Connections Helper
+# NYT Connections Helper
 
 A web app to help solve [NYT Connections](https://www.nytimes.com/games/connections) puzzles.
 
